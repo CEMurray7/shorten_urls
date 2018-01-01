@@ -1,0 +1,14 @@
+<h1>All Links</h1>
+<table>
+  <tr>
+    <th>Original Link</th>
+    <th>Shortened Link</th>
+  </tr>
+  <% @longlinks.each do |link| %>
+  <tr>
+    <td><%= link.url %></td>
+    <td><%= link_to "#{request.original_url}#{link.id}", "#{request.original_url}#{link.id}", data: { confirm: "Are you sure?" } %></td>
+    <% end %>
+  </tr>
+</table>
+<%= link_to 'New Link', new_longlink_path %>

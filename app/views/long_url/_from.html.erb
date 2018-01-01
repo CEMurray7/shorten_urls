@@ -1,0 +1,8 @@
+<h1></h1>
+<%= form_for(@long_url) do |form|%>
+
+  
+  <%= form.label :url %>
+  <%= form.text_field :url %>
+  <%= form.submit "Shorten your link" %>
+<% end %>
