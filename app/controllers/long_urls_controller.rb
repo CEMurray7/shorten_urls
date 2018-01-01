@@ -1,4 +1,4 @@
-class LongUrlController < ApplicationController
+class LongUrlsController < ApplicationController
   before_action :set_long_url, only: [:show, :edit, :update, :destroy]
 
   def index

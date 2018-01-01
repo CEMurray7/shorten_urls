@@ -4,11 +4,11 @@
     <th>Original Link</th>
     <th>Shortened Link</th>
   </tr>
-  <% @longlinks.each do |link| %>
+  <% @long_url.each do |link| %>
   <tr>
     <td><%= link.url %></td>
     <td><%= link_to "#{request.original_url}#{link.id}", "#{request.original_url}#{link.id}", data: { confirm: "Are you sure?" } %></td>
     <% end %>
   </tr>
 </table>
-<%= link_to 'New Link', new_longlink_path %>
+<%= link_to 'New Link', new_long_url_path %>

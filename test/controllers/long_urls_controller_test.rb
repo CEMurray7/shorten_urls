@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class LongUrlControllerTest < ActionDispatch::IntegrationTest
+class LongUrlsControllerTest < ActionDispatch::IntegrationTest
   # test "the truth" do
   #   assert true
   # end
