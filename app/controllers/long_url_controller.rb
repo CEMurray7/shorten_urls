@@ -1,4 +1,4 @@
-class LongUrlsController < ApplicationController
+class LongUrlController < ApplicationController
   before_action :set_long_url, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -6,7 +6,7 @@ class LongUrlsController < ApplicationController
   end
 
   def show
-    redirect_to long_url_path
+    redirect_to "#{@long_url.url}"
   end
 
   def new
@@ -50,7 +50,7 @@ class LongUrlsController < ApplicationController
     end
   end
 
-private
+  private
 
   def set_long_url
     @long_url = LongUrl.find(params[:id])
